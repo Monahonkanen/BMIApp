@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BMIApp</string>
+    <string name="titleText">Laske painoindeksisi</string>
+    <string name="pituusText">Pituus:</string>
+    <string name="painoText">Paino: </string>
+    <string name="Laskebutton">Laske</string>
+    <string name="painovihje">kg</string>
+    <string name="pituusvihje">cm</string>
+    <string name="resultView">Painoindeksisi on: </string>
+    <string name="tulosView"></string>
+
+</resources>

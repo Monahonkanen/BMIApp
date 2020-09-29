@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/titleText"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editPituus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="Pituus cm. Arvo väliltä 130-250."
+        android:ems="5"
+        android:inputType="number|numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/hintPituus"
+        app:layout_constraintEnd_toEndOf="@+id/titleText"
+        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintStart_toStartOf="@+id/titleText"
+        app:layout_constraintTop_toTopOf="@+id/hintPituus" />
+
+    <TextView
+        android:id="@+id/pituusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="@string/pituusText"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/painoText"
+        app:layout_constraintEnd_toStartOf="@+id/editPituus"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/painoText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/laskeButton"
+        android:layout_width="202dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_button"
+        android:onClick="calculate"
+        android:text="@string/Laskebutton"
+        android:textColorHighlight="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPaino" />
+
+    <TextView
+        android:id="@+id/painoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/painoText"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/editPaino"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pituusText" />
+
+    <EditText
+        android:id="@+id/editPaino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="Painosi kg. Arvo väliltä 30-200."
+        android:ems="5"
+        android:inputType="number|numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/hintPaino"
+        app:layout_constraintEnd_toEndOf="@+id/editPituus"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editPituus"
+        app:layout_constraintTop_toTopOf="@+id/hintPaino"
+        app:layout_constraintVertical_bias="0.461" />
+
+    <TextView
+        android:id="@+id/hintPaino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/painovihje"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toEndOf="@+id/editPaino"
+        app:layout_constraintTop_toTopOf="@+id/painoText" />
+
+    <TextView
+        android:id="@+id/hintPituus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pituusvihje"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@+id/editPituus"
+        app:layout_constraintStart_toStartOf="@+id/hintPaino"
+        app:layout_constraintTop_toTopOf="@+id/pituusText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
